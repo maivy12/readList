@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/ex4_sua.css">
+</head>
+<body>
+    <div class="form__container">
+        <form id="form">
+            <h1>Bài tập Javascript</h1>
+            <div class="input-field">
+                <label for="">Tổng bill</label>
+                <input id="totalBill" type="text" />
+            </div>
+            <div class="input-field">
+                    <label for="">Tip cho nhân viên</label>
+                    <select name="" id="tip">
+                        <option value="10">10%</option>
+                        <option value="20">20%</option>
+                        <option value="30">30%</option>
+                    </select>
+            </div>
+            <div class="input-field">
+                <label for="">Số người đi</label>
+                <input id="people" type="text" />
+            </div>
+            <button id="submit-button">Tính tiền thôi nào!</button>
+        </form>
+    </div>
+    
+    <script>
+        
+        const form = document.getElementById('form')
+
+        form.addEventListener("submit", (e) => {
+            e.preventDefault();
+            const totalBill = document.querySelector('#totalBill').value;
+            const tip = document.querySelector("#tip").value;
+            const people = document.querySelector("#people").value;
+ 
+            if (!totalBill || !tip || !people){
+                alert('Please enter a number');
+            }
+
+            const totalBillNum = parseFloat(totalBill);
+            const tipNum = parseFloat(tip);
+            const peopleNum = parseInt(people);
+
+            if (!totalBill || isNaN(tipNum) || !peopleNum)
+                alert("Please enter a number");
+            
+            const result = totalBillNum *(1 + tip/100) / peopleNum;
+            alert(result);
+            return result;
+        })
+
+    </script>
+</body>
+</html>

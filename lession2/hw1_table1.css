@@ -1,0 +1,27 @@
+table{
+    border: 0;
+}
+thead{
+    background-color: rgb(222, 135, 4);
+}
+.orange{
+    background-color: rgb(222, 135, 4);
+}
+.blue{
+    background-color: rgb(34, 37, 54);
+}
+.submit{
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #62af5e;
+    border: none;
+}
+.cancel{
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #d9544f;
+    border: none;
+}
+body{
+    color: #d2d636
+}

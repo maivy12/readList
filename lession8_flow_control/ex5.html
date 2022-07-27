@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function tinhDiemTrungBinh(dToan, dLy, dHoa){
+            let dTrungBinh;
+            dTrungBinh = ((dToan + dLy + dHoa)/3).toFixed(1);
+            return dTrungBinh;
+        }
+        function xepLoai(diem){
+            let loai;
+            if (diem >= 9 && diem <= 10){
+                loai = 'Xuất sắc';
+            }
+            else if (diem >= 8){
+                loai = 'Giỏi';
+            }
+            else if (diem >= 7){
+                loai = 'Khá';
+            }
+            else if (diem >= 6){
+                loai = 'TB khá';
+            }
+            else if (diem >= 5){
+                loai = 'TB';
+            }
+            else{
+                loai = 'yếu';
+            }
+            return loai;
+        }
+        function main(a,b,c){
+            let DTB;
+            DTB = tinhDiemTrungBinh(a,b,c);
+            let xl;
+            xl = xepLoai(DTB);
+            return `Học sinh xếp loại ${xl} với số điểm ${DTB}`;
+        }
+        
+        console.log(main(8,9,10));
+
+    </script>
+    
+</body>
+</html>

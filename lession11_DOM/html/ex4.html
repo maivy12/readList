@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/ex4.css">
+</head>
+<body>
+    <div class="form">
+        <h1>Bài tập Javascript</h1>
+        <p>Tổng bill</p>
+        <input id="total" for="total"/><br>
+        <p>Tip cho nhân viên (%)</p>
+        <input id="tip" for="tip"/><br>
+        <p>Số người cùng đi</p>
+        <input id="people" for="people"/><br>
+        <p id="result"></p>
+        <button onclick="calculate()">Tính tiền thôi nào!</button>
+    </div>
+</body>
+<script>
+    let total = document.getElementById('total');
+    let tip = document.getElementById('tip');
+    let people = document.getElementById('people');
+    let result = document.getElementById('result');    
+
+    function calculate(){
+        if (total.value && tip.value && people.value){
+            result.innerHTML = `$${(total.value * (tip.value/100 + 1) / people.value).toFixed(2)}`;
+        }
+        else
+            alert('Vui lòng nhập đầy đủ các trường');
+    }
+</script>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="device-width initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app"></div>
+    <script>
+        {
+            console.log('1. object to json');
+
+            const person = {
+                name: "John",
+                age: 30,
+                city: "New York"
+            }
+            // biến obj person thành text
+            const json = JSON.stringify(person);
+            console.log(json);
+
+            document.getElementById('app').innerHTML = json;
+        }
+        {
+            console.log('1. array to json');
+
+            const cars = ["Ford", "BMW", "Audi", "Fiat"];
+            // biến array cars thành text
+            const json = JSON.stringify(cars);
+            console.log(json);
+
+            document.getElementById('app').innerHTML = json;
+
+        }
+    </script>
+</body>
+</html>

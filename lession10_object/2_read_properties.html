@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const person = {
+            firstname: 'John',
+            lastname: 'Doe',
+            age: 50,
+            eyecolor: 'blue',
+        }
+        console.log('1. Read property');
+        console.log(`first name: ${person.firstname}`);
+        console.log(`last name: ${person.lastname}`);
+
+        // let age = 'age';
+        console.log(`age: ${person['age']}`);
+
+        console.log('2. destructuring');
+        const {firstname, age} = person;
+        console.log(firstname, age);
+
+        console.log('3. loop for in');
+        for (let prop in person){
+            console.log(`${prop} : ${person[prop]}`);
+        }
+
+        console.log('4. read combo');
+        let x = prompt('What do you want to know?');
+        for (let prop in person){
+            if (prop == x){
+                console.log(person[prop]);
+                break;
+            }
+        }
+        
+
+        
+
+    </script>
+</body>
+</html>

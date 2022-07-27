@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Storage</title>
+
+    <!----------------------------------------
+        1. localStorage
+            - Store: localStorage.setItem()
+            - Retrieve: localStorage.getItem()
+            - Remove: localStorage.removeItem()
+            
+        2. sessionStorage
+            - Store: sessionStorage.setItem()
+            - Retrieve: sessionStorage.getItem()
+            - Remove: sessionStorage.removeItem()
+            
+        3. json
+            - Type (strings, number, object, array, boolean, null)
+            - JSON.parse()
+                + json to object
+                + Json to array
+            - JSON.stringify()
+                + object to json
+                + array to json
+            - JSON Store
+                + Storing data
+                + Retrieving data
+
+        4. api
+            
+
+    ------------------------------------------------>
+</head>
+
+<body>
+    <div id="app"></div>
+    <script>
+        async function load(){
+            const conn = await fetch('https://pokeapi.co/api/v2/pokemon/pikachu/');
+            const data = await conn.json();
+            console.log(data);
+            readAPI(data);
+        }
+
+        load();
+
+        function readAPI(data){
+            const app = document.getElementById('app');
+
+            const h1 = document.createElement('h1');
+            h1.innerHTML = data.name;
+            console.log(h1);
+
+            const img = document.createElement('img');
+            img.src = data.sprites.front_default;
+            console.log(img);
+
+            app.appendChild(h1);
+            app.appendChild(img);
+
+        }
+
+    </script>
+
+</body>
+
+</html>

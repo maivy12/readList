@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>Đăng ký khóa học</button>
+    <h2>Khóa học chưa được đăng ký</h2>
+</body>
+<script>
+    let btn = document.getElementsByTagName('button');
+    let text = document.getElementsByTagName('h2');
+    btn[0].addEventListener("click", () => {
+        text[0].innerHTML = 'Bạn đã đăng ký khóa học thành công';
+        btn[0].disabled = true;
+    })
+</script>
+</html>

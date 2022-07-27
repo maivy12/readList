@@ -1,0 +1,16 @@
+.buttons{
+    height: 40px;
+    width: 30%;
+}
+th{
+    color: red;
+    font-size: 30px;
+    background-color: #FFA;
+}
+td{
+    background-color: #0CF;
+    padding: 2px 15px;
+}
+* {
+    font-size: 16px;
+}

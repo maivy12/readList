@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!----------------------------------------
+        1. Read DOM
+            - Read id
+            - Read class
+            - Read tags
+            - querySelector / querySelectorAll
+        2. Update DOM
+            - textContent
+            - innerHTML
+        3. Event 
+            - onClick (html/js)
+            - addEventListener
+        4. Create
+            - insertAdjacentHTML
+            - createElement
+        5. Delete        
+            - remove()  
+            - removeChild
+                + firstElementChild 
+                + lastElementChild 
+        6. Style & Atribute
+            - ParentNode
+            - Dom Style
+            - Attribute
+
+
+    ------------------------------------------------>    
+</head>
+<body>
+    <h1 id="msg">Singers</h1>
+    <ul id="list">
+        <li class="singler">James Bay</li>
+        <li class="singler">Nate Ruess</li>
+        <li class="singler">Ed Sheeran</li>
+        <li class="singler">Steve Garriagn <span>(Hot)</span></li>
+    </ul>
+    <li>Dinh</li>
+    <p><span>View more</span></p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto dolorum maiores impedit ut, maxime, deserunt non voluptatem culpa hic, perferendis id inventore est ab modi obcaecati at totam ex autem.</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto dolorum maiores impedit ut, maxime, deserunt non voluptatem culpa hic, perferendis id inventore est ab modi obcaecati at totam ex autem.</p>
+</body>
+<script>
+    console.log('1. Read id');
+    {
+        const d = document.getElementById('msg');
+        console.log(d);
+    }
+
+    console.log('2. Read class');
+    {
+        // className lưu vào array
+        let x = document.getElementsByClassName('singler');
+        console.log(x);
+
+        for(let i = 0; i < x.length; i++){
+            console.log(x[i]);
+        }
+    }
+
+    console.log('3. Read tags');
+    {
+        let x = document.getElementsByTagName('p');
+        console.log(x);
+
+        for(let i = 0; i < x.length; i++){
+            console.log(x[i]);
+        }
+    }
+
+    console.log('4. QuerrySelector');
+    {
+        const list = document.getElementById('list');
+        
+        // QuerrySelector
+        list.querySelector('li').innerHTML = 'Hello';
+        list.querySelector('li span').innerHTML = '[Good]';
+
+        // QuerrySelectorAll
+        const lists = document.querySelectorAll('li');
+        console.log(lists);
+
+        for (let i = 0; i < lists.length; i++){
+            lists[i].innerHTML = 'hi';
+        }
+    }
+</script>
+</html>

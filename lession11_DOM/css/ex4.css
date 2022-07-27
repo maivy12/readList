@@ -1,0 +1,51 @@
+*{
+    padding: 10px;
+    margin: 0;
+    border-radius: 6px;
+    
+}
+body{
+    position: relative;
+}
+.form{
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+    top: 10%;
+    background-color: rgba(255, 160, 19, 0.815);
+    border-radius: 6px;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 400px;
+}
+p, input, button{
+    font-size: larger;
+}
+p, button{
+    font-weight: bold;
+}
+head, button{
+    position: relative;
+    left: 10%;
+}
+input {
+    border: none;
+    margin: 0px 10px 10px;
+    width: 90%;
+    height: 30px;
+}
+button{
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+    padding: 10px;
+    background-color: #fff;
+    border: none;
+    margin: 5px;
+}
+#result{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+    
+}

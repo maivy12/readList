@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!--
+        1. responsive là gì?
+        2. tại sao dùng responsive? phù hợp với nhiều loại màn hình
+        3. responsive web design vs adaptive web design
+        - adaptive: tạo phiên bản riêng cho từng thiết bị
+        4. Mobile first vs Desktop first
+        - Mobile 1st: thiết kế trên mobil trc, r mở rộng ra cho bản desktop 1st -> tối ưu hơn
+        - Desktop 1st: ngược lại
+        5. Viewport: cho biết ứng dụng có responsive ko
+        - name=viewport: chiều rộng web = chiều rộng thiết bị
+        - initial-scale=1: muc zoom ban đầu
+        6. Responsive base:
+        - images
+        - picture
+        - text
+        7. Responsive advance
+        - Media queries:
+            + all: tất cả các thiết bị
+            + screen: các thiết bị hiển thị trên màn hình: đt, máy tính bảng, máy tính bàn
+            + print: hiển thị các văn bản in
+            + speech: các thiết bị có chức năng đọc nd trên màn hình
+        - Breakpoint:
+            + <576px: cỡ màn hỉnh đt
+            + 576 - 768px: cỡ màn hình tablet
+            + 768 - 1100px: màn hình tablet ngang
+            + >= 1200px: màn hình máy tính lớn
+        8. Responsive web page
+        - 
+
+    -->
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .container{
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        .main{
+            display: flex;
+        }
+        .main__item{
+            padding: 20px;
+        }
+        .main__nav{
+            background-color: rgb(143, 194, 253);
+            width: 20%;
+        }
+        .main__navMenu{
+            color: #fff;
+            padding: 5px;
+            display: block;
+            hover:
+        }
+        .main__content{
+            background-color: #fff;
+        }
+        .main__sidebar{
+            background-color: green;
+            width: 20%;
+        }
+        @media(max-width:800px){
+            .main{
+                flex-direction: column;
+            }
+            .main__item{
+                width: 100%;
+            }
+        }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+        <header>
+            <h1>Welcome</h1>
+        </header>
+        <div class="main">
+            <div class="main__nav main__item">
+                Menu
+                <ul class="main__navMenu">
+                    <li><a href="a">Link 1</a></li>
+                    <li><a href="a">Link 2</a></li>
+                    <li><a href="a">Link 3</a></li>
+                    <li><a href="a">Link 4</a></li>
+                    <li><a href="a">Link 5</a></li>
+                    <li><a href="a">Link 6</a></li>
+                </ul>
+            </div>
+            <div class="main__content main__item">
+                Content
+                <article>
+                    <h2>Lorem ipsum</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, cupiditate illo corrupti illum architecto magnam dolor vero quis sunt nam nulla dolores necessitatibus, eligendi itaque similique veritatis officiis, odio dolorum!</p>
+                </article>
+            </div>
+            <div class="main__sidebar main__item">
+                Sidebar
+            </div>
+        </div>
+        <footer>
+            <p>@ copyright 2022</p>
+        </footer>
+    </div>
+  </body>
+</html>

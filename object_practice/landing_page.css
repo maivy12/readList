@@ -1,0 +1,47 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.header{
+    padding: 10px;
+    display: flex;
+    font-size: 20px;
+}
+.overlay{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.082);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+.company_name{
+    width: 15%;
+    text-align: end;
+}
+.company_name > b{
+    font-size: 50px;
+}
+.company_name > p{
+    font-size: 10px;
+}
+.media > ul, .menu1 > ul, .menu2 > ul{
+    display: flex;
+    list-style-type: none;
+    justify-content: space-between;
+    align-content: center;
+}
+.media{
+    width: 10%;
+
+}
+.menu1{
+    width: 50%;
+    padding: 10px 20px;
+    list-style-type: none;
+    margin: 0 20px;
+}
+.menu2 > p{
+    display: block;
+}

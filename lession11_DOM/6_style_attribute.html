@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="msg">Singers</h1>
+    <ul id="list">
+        <li class="singer">James Bay</li>
+        <li class="singer">Nate Ruess</li>
+        <li class="singer">Ed Sheeran</li>
+        <li class="singer">Steve Garriagn<span>(Hot)</span></li>
+    </ul>
+    <li>Dinh</li>
+    <p><span>Viewmore</span></p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque quae nam dignissimos aliquam, ducimus possimus voluptate rem voluptatibus ullam pariatur molestias. Facilis velit facere modi, voluptatem officiis expedita eos earum.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi libero magni nisi distinctio ea. Quos esse possimus deleniti, ullam quae omnis, explicabo cumque suscipit fuga totam qui quia, beatae aspernatur.</p>
+    <p id="date" onclick="showtime()">Click show time now</p>
+
+    <button id="btnVote">Vote</button>
+    <button id="btnLike">Like</button>
+    <br/>
+    <br/>
+    <p id="insert"><b>message...</b></p>
+    <button onclick="myRemove()">Remove</button>
+    <ul id="myList">
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Milk</li>
+    </ul>
+
+    <div id="parent">
+        <p id="first-child">Some child text</p>
+        <p id="second-child">Some more child text</p>
+    </div>
+
+    <input type="button" value="OK"/>
+    <style>
+        .color{
+            color: rbg(243, 255, 237);
+        }
+    </style>
+</body>
+<script>
+    console.log('1. Parent node');
+    const firstChild = document.getElementById('first-child');
+
+    console.log(firstChild);
+    console.log(firstChild.parentNode);
+
+    console.log('2. Dom Style');
+    firstChild.parentNode.style.backgroundColor = 'gray';
+    firstChild.parentNode.style.padding = '5px 20px';
+    firstChild.parentNode.style.marginBottom = '20px';
+
+    console.log('3. Dom Attribute');
+
+    document.getElementById('second-child').setAttribute('class', 'color');
+    document.getElementsByTagName('input')[0].removeAttribute('type');
+    document.getElementsByTagName('input')[0].removeAttribute('value');
+
+</script>
+</html>

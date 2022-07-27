@@ -1,0 +1,22 @@
+.title{
+    color: rgb(29, 175, 243);
+}
+body{
+    background-color: #dfeef0;
+}
+.extracurricular{
+    border-bottom: 3px dashed rgb(29, 175, 243);
+    padding-bottom: 16px;
+}
+.profile_photo{
+    border-radius: 50%;
+}
+
+/* h1, h2 , h3 {
+    color
+} */
+
+.title-2 {
+    border-top: 3px dashed rgb(29, 175, 243);
+    padding-top: 5px;
+}

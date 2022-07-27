@@ -1,0 +1,12 @@
+.card{
+    width: 200px;
+    height: 200px;
+    background-color: cyan;
+    margin-bottom: 10px;
+}
+.card-1{
+    background-color: red;
+}
+.card-1 h2{
+    color: white;
+}

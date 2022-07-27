@@ -1,0 +1,19 @@
+.form__container{
+    display: flex;
+    justify-content: center;
+    margin: 100px 0;
+    font-size: 20px;
+}
+
+button{
+    border: none;
+    border-radius: 8px;
+    padding: 8px 16px;
+    margin: 12px 0;
+}
+
+.input-field input, .input-field select{
+    display: block;
+    margin-bottom: 24px;
+
+}

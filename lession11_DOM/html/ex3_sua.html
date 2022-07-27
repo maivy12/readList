@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/ex3_sua.css">
+</head>
+<body>
+    <div class="form__container">
+        <form id="form">
+            <div class="input-field">
+                <label for="">Tên đăng nhập</label>
+                <input id="userName" type="text" />
+            </div>
+            <div class="input-field">
+                    <label for="">Mật khẩu</label>
+                    <input id="password" type="password" />
+            </div>
+            <button id="submit-button">Đăng nhập</button>
+        </form>
+    </div>
+    
+    <script>
+        const user = {
+            name: "admin",
+            password:'admin123',
+        };
+        const button = document.getElementById('submit-button');
+        const form = document.getElementById('form')
+
+        form.addEventListener("submit", (e) => {
+            e.preventDefault();
+            const userNameInput = document.getElementById('userName');
+            const passwordInput = document.querySelector("#password");
+            const userName = userNameInput.value;
+            const password = passwordInput.value;
+
+            if (userName == user.name && password == user.password)
+                alert('Đăng nhập thành công');
+            else 
+                alert('Bạn đã đăng nhập thất bại');
+        })
+
+    </script>
+</body>
+</html>

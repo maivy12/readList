@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="ex_calculator.css">
+</head>
+<body>
+    <form>
+        <h1>Bé tập tính Website</h1>
+        <div class="column1">
+            <p>Nhập số thứ nhất:</p>
+            <input type="text" id="number1">
+            <p>Nhập số thứ hai:</p>
+            <input type="text" id="number2">
+            <p>Kết quả:</p>
+            <input type="text" id="result">
+        </div>
+        <div class="column2">
+            <div>
+                <input type="radio" name="operation" value="cong">
+                <label for="operation">Cộng</label>
+            </div>
+            <div>
+                <input type="radio" name="operation" value="tru">
+                <label for="operation">Trừ</label>
+            </div>
+            <div>
+                <input type="radio" name="operation" value="nhan ">
+                <label for="operation">Nhân</label>
+            </div>
+            <div>
+                <input type="radio" name="operation" value="chia">
+                <label for="operation">Chia</label>
+            </div>
+            <button onclick="calculate()">Tính</button>
+        </div> 
+    </form>
+    
+    <script src="ex_calculator.js">
+
+    </script>
+</body>
+</html>

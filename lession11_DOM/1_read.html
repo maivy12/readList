@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--
+        1. read DOM
+        - read id
+        - read class
+        - read tags
+        - querySelector / querySelectorAll
+        2. Update DOM
+        - textContent
+        3. Event
+        - onClick(html/js)
+        - addEventListener
+        4. create
+        - insertAdjacentHTML
+        - createElement
+        5. Delete
+        - remove()
+        - removeChild(firstElementChild/lastElementChild)
+        6. Style, attribute
+        - Parent node
+        - DOM style
+        - attribute
+    -->
+</head>
+<body>
+    <h1 id="msg">Singers</h1>
+    <ul id="list">
+        <li class="singer">James Bay</li>
+        <li class="singer">Nate Ruess</li>
+        <li class="singer">Ed Sheeran</li>
+        <li class="singer">Steve Garriagn<span>(Hot)</span></li>
+    </ul>
+    <p><span>View more</span></p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque quae nam dignissimos aliquam, ducimus possimus voluptate rem voluptatibus ullam pariatur molestias. Facilis velit facere modi, voluptatem officiis expedita eos earum.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi libero magni nisi distinctio ea. Quos esse possimus deleniti, ullam quae omnis, explicabo cumque suscipit fuga totam qui quia, beatae aspernatur.</p>
+</body>
+<script>
+    console.log('1. Read id');
+    {
+        const d = document.getElementById('msg');
+        console.log(d);
+    }
+    console.log('2. Read class');
+    {
+        let x = document.getElementsByClassName('singer');
+        console.log(x);
+
+        for (let i = 0; i< x.length; i++){
+            console.log(x[i]);
+        }
+    }
+    console.log('3. Read tags');
+    {
+        let x = document.getElementsByTagName('p');
+        console.log(x);
+
+        for(let i = 0; i<x.length; i++){
+            console.log(x[i]);       
+        }
+    }
+
+    console.log('4. querySelector');
+    {
+        const list = document.getElementById('list');
+        console.log(`list = ${list}`);
+
+        // querySelector 
+        list.querySelector('li').innerHTML = 'Hello';
+        list.querySelector('li span').innerHTML = '[Good]';
+
+        //querySelectorAll
+        const lists = document.querySelectorAll('li');
+        console.log(lists);
+
+        for(let i = 0; i < lists.length; i++){
+            lists[i].innerHTML = 'hi';
+        }
+       
+    }
+</script>
+</html>

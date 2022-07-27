@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--
+        2. Array
+            - Initialize / loop / method
+            - create (push, concat...)
+            - read: for, for in, for of, forEach
+            - update: index, for, map,...
+            - delete: splice(),
+    -->
+</head>
+<body>
+    <script>
+        const myList = [];
+        console.log(myList);
+
+        const numberArray = [2,3,4,5];
+        console.log(numberArray);
+
+        const stringArray = ['eat', 'work', 'play', 'sleep'];
+        console.log(stringArray);
+
+        const newData = ['work', 'exercise', 1, true];
+        console.log(newData);
+
+        // create
+        const fruits = ['Bananas', 'Orange', 'Apples', 'Mango'];
+        fruits.push('Kiwi'); // add 'Kiwi'
+
+        console.log(fruits);
+
+        // read
+        console.log(fruits[0]);
+        console.log(...fruits); // trai het du lieu
+
+        for (let i = 0; i < fruits.length; i++){
+            console.log(fruits[i]);
+        }
+
+        // for in: index
+        console.log('For in');
+        for(let index in fruits){
+            console.log(fruits[index]);
+        }
+
+        // for of: value
+        console.log('For of');
+        for(let item of fruits){
+            console.log(item);
+        }
+
+        // for each: index + value
+        console.log('For each');
+        fruits.forEach((item, index) => {
+            console.log(index, item);
+        });
+
+        console.log('I. Update');
+        console.log(fruits);
+         
+        // update index
+        fruits[0] = 'Watermelon';
+        console.log(fruits);
+
+        console.log('Update all');
+        for(let i = 0; i < fruits.length; i++){
+            fruits[i] = `${i + 1} : ${fruits[i]}`;
+        }
+        console.log(fruits);
+
+        console.log('II. Delete');
+        fruits.splice(1, 1); // index bat dau, so phan tu muon xoa
+        console.log(fruits);
+
+        console.log('III. Method');
+        const age = [3, 10, 18, 20];
+        console.log(age);
+
+        console.log(age.findIndex((age)=>{
+            return age > 10;
+        }))
+        
+        console.log(Math.max(...age));
+        console.log(Math.min(...age));
+
+        console.log('VI. Mang da chieu');
+
+        let person = '';
+        let num = 0;
+        let userData = [
+            ['Yamada', 28, 'Tokyo'],
+            ['Kiyoshi', 30, 'Hanoi'],
+            ['Honda', 24, 'Osaka'],
+        ];
+
+        console.log(userData);
+
+        userData.forEach((item)=>{
+            num++;
+            person += num + '.';
+
+            for (let i = 0; i < item.length; i++){
+                person += item[i] + ' ';
+            }
+
+            person += '\n';
+
+        })
+
+        console.log(person);
+
+    </script>
+</body>
+</html>

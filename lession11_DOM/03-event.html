@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!----------------------------------------
+        1. Read DOM
+            - Read id
+            - Read class
+            - Read tags
+            - querySelector / querySelectorAll
+        2. Update DOM
+            - textContent
+            - innerHTML
+        3. Event 
+            - onClick (html/js)
+            - addEventListener
+        4. Create
+            - insertAdjacentHTML
+            - createElement
+        5. Delete        
+            - remove()  
+            - removeChild
+                + firstElementChild 
+                + lastElementChild 
+        6. Style & Atribute
+            - ParentNode
+            - Dom Style
+            - Attribute
+
+
+    ------------------------------------------------>    
+</head>
+<body>
+    <h1 id="msg">Singers</h1>
+    <ul id="list">
+        <li class="singler">James Bay</li>
+        <li class="singler">Nate Ruess</li>
+        <li class="singler">Ed Sheeran</li>
+        <li class="singler">Steve Garriagn <span>(Hot)</span></li>
+    </ul>
+    <li>Dinh</li>
+    <p><span>View more</span></p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto dolorum maiores impedit ut, maxime, deserunt non voluptatem culpa hic, perferendis id inventore est ab modi obcaecati at totam ex autem.</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto dolorum maiores impedit ut, maxime, deserunt non voluptatem culpa hic, perferendis id inventore est ab modi obcaecati at totam ex autem.</p>
+    <p id="date" onclick="showtime()">Click show time now</p>
+
+    <button id="btnVote">Vote</button>
+    <button id="btnLike">Like</button>
+</body>
+<script>
+    console.log('1. onclick');
+
+    function showtime(){
+        const d = document.getElementById('date');
+        d.innerHTML = Date();
+    }
+ 
+    const btnVote = document.getElementById('btnVote');
+
+    btnVote.onclick = () =>{
+        btnVote.innerHTML = 'Voted';
+        console.log('Voted');
+    }
+
+    btnVote.onclick = () =>{
+        btnVote.innerHTML = 'Voted...';
+        console.log('Voted..');
+    }
+
+    console.log('2. addEventListener');
+    const btnLike = document.getElementById('btnLike');
+
+    btnLike.addEventListener('click', () => {
+        btnLike.innerHTML = 'Liked';
+        console.log('Liked');
+    });
+
+    btnLike.addEventListener('click', () => {
+        btnLike.innerHTML = 'Liked...';
+        console.log('Liked...');
+    });
+
+    console.log('3. Target');
+    btnLike.addEventListener('click', (event) => {
+        btnLike.innerHTML = 'Liked';
+        console.log(event.target);
+    });
+
+    btnVote.onclick = (event) => {
+        btnVote.innerHTML = 'Voted';
+        console.log('Voted');
+        console.log(event.target);
+    }   
+</script>
+</html>

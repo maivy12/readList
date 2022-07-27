@@ -1,0 +1,40 @@
+<!--
+    1. box model
+    - block
+        + width/height
+        + px / **% / vw - vh
+    - border 
+        + border-width
+        + border-height
+        + border-color
+        + border-radius
+        ** box-sizing border-box
+    - padding
+        + shortcode: top - right - bottom - left
+        + width
+        + box-sizing
+    - margin
+    2. position
+    - static: default 
+    - relative: ko bị mất chỗ, khi di chuyển dựa theo vị trí cũ
+    - absolute: bị mất chỗ, những box xung quanh giành chỗ, di chuyển dựa vào box cha (có set position ko phải static)
+    - fixed
+    - sticky
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="box">
+        <div class="box__item box__danger">Danger</div>
+        <div class="box__item box__warning">Warning</div>
+    </div>
+    
+</body>
+</html>
